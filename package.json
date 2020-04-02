@@ -26,6 +26,7 @@
     "typography-theme-noriega": "^0.16.19"
   },
   "devDependencies": {
+    "eslint-config": "git@github.com:eahenke/eslint-config.git",
     "prettier": "^1.19.1"
   },
   "keywords": [],
