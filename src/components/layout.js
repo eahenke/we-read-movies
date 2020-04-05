@@ -7,13 +7,17 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Container from 'react-bootstrap/Container';
+import Container from './container';
+import Header from './header';
 
 const Layout = ({ children }) => (
-    <Container>
-        <main>{children}</main>
-        <footer>© {new Date().getFullYear()}</footer>
-    </Container>
+    <>
+        <Header />
+        <Container>
+            <main>{children}</main>
+            <footer>© {new Date().getFullYear()}</footer>
+        </Container>
+    </>
 );
 
 Layout.propTypes = {
