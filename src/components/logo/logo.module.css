@@ -2,10 +2,12 @@
     text-align: center;
 }
 
+/* All of this is placeholder until logo is finished */
 .title {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    line-height: 1;
 }
 
 .title span {
-    font-size: 4rem;
+    font-size: 6.4rem;
 }
