@@ -1,0 +1,44 @@
+.bio {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin: var(--space-md) 0;
+
+}
+
+@media (min-width: 758px) {
+    .bio {
+        max-width: 80%;
+        margin: var(--space-md) auto;
+    }
+}
+
+.titleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bioTitle {
+    text-transform: uppercase;
+}
+
+.titleBar > * {
+    margin-bottom: 0;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    flex: 1.5 1;
+    min-width: 100px;
+}
+
+.textContainer {
+    flex: 3;
+    flex-grow: 5;
+}
+
+.bioText {
+    color: var(--color-text-secondary);
+}
