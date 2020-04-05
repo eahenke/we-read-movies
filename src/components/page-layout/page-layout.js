@@ -7,10 +7,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Container from './container';
-import Header from './header';
+import Container from '../container';
+import Header from '../header';
 
-const Layout = ({ children }) => (
+const PageLayout = ({ children }) => (
     <>
         <Header />
         <Container>
@@ -20,8 +20,8 @@ const Layout = ({ children }) => (
     </>
 );
 
-Layout.propTypes = {
+PageLayout.propTypes = {
     children: PropTypes.node.isRequired
 };
 
-export default Layout;
+export default PageLayout;
