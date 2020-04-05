@@ -1,15 +1,19 @@
 .header {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-        ". logo ."
-        ". nav ."
+    margin-bottom: var(--space-xl);
+}
+
+.description {
+    color: var(--color-text-secondary);
+    text-align: center;
+    font-size: 2.2rem;
 }
 
 .logoContainer {
-    grid-area: logo;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navContainer {
-    grid-area: nav;
+    /* grid-area: nav; */
 }
