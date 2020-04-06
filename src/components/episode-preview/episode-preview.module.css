@@ -1,0 +1,26 @@
+.episode-container {
+    max-width: 600px;
+    margin: var(--space-xl) 0;
+}
+
+.divider {
+    font-size: var(--font-size-jumbo);
+}
+
+.meta {
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-small);
+}
+
+.date {
+    margin-right: var(--space-sm);
+}
+
+.playerContainer {
+    margin: var(--space-lg) 0;
+}
+
+.description {
+    font-size: var(--font-size-large);
+}
