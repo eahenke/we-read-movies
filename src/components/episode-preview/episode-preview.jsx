@@ -2,15 +2,14 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import Box from '../box';
 import Player from '../player';
+import EpisodeTitle from '../episode-title';
 import styles from './episode-preview.module.css';
 
 const EpisodePreview = ({ num, title, date, duration, src, description }) => (
     <Box className={styles.episodeContainer}>
         {/* Wrap this in a link to dynamic page */}
         <span className="section-heading">
-            <span>Episode {num}</span>
-            <span className={styles.divider}> | </span>
-            <span>{title}</span>
+            <EpisodeTitle num={num} title={title} />
         </span>
         <div className={styles.meta}>
             <span className={styles.date}>{date}</span>
