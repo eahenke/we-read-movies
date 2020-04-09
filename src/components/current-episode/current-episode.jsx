@@ -3,7 +3,7 @@ import { string, number } from 'prop-types';
 import Box from '../box';
 import Player from '../player';
 import EpisodeTitle from '../episode-title';
-import styles from './episode-preview.module.css';
+import styles from './current-episode.module.css';
 
 const EpisodePreview = ({ num, title, date, duration, src, description }) => (
     <Box className={styles.episodeContainer}>
