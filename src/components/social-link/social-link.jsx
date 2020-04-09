@@ -3,6 +3,7 @@ import { number } from 'prop-types';
 import { FaFacebookF, FaInstagram, FaTwitter, FaItunesNote } from 'react-icons/fa';
 import { SOCIAL_PLATFORMS } from '../../constants';
 import { socialPlatformPropType } from '../../prop-types';
+import ExternalLink from '../external-link';
 import styles from './social-link.module.css';
 
 const ICON_COMPONENTS = {
@@ -17,9 +18,9 @@ const SocialLink = ({ platform, size, url }) => {
     if (!IconComponent) return null;
 
     return (
-        <a className={styles.link} href={url} rel="noopener noreferrer" target="_blank">
+        <ExternalLink className={styles.link} href={url}>
             <IconComponent size={size} />
-        </a>
+        </ExternalLink>
     );
 };
 

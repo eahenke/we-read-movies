@@ -1,12 +1,15 @@
 import React from 'react';
 import { string, shape } from 'prop-types';
 import Image from 'gatsby-image';
+import ExternalLink from '../external-link';
 import styles from './image-with-attribution.module.css';
 
 const ImageWithAttribution = ({ src, text, url }) => (
     <div>
         <Image fluid={src} />
-        <div className={styles.attribution}>{url ? <a href={url}>{text}</a> : <span>{text}</span>}</div>
+        <div className={styles.attribution}>
+            {url ? <ExternalLink href={url}>{text}</ExternalLink> : <span>{text}</span>}
+        </div>
     </div>
 );
 
