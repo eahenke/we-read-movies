@@ -13,6 +13,9 @@ async function createEpisodePages({ actions, graphql }) {
                 edges {
                     node {
                         slug
+                        cover {
+                            artist
+                        }
                     }
                 }
             }
@@ -24,7 +27,10 @@ async function createEpisodePages({ actions, graphql }) {
             path: `episodes/${node.slug}`,
             component: path.resolve('./src/templates/episode/episode.jsx'),
             context: {
-                slug: node.slug
+                // Episode ID
+                slug: node.slug,
+                // Artist ID
+                artist: node.cover && node.cover.artist
             }
         })
     );

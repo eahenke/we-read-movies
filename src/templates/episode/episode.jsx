@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { shape } from 'prop-types';
+import { shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
 import { episodePropType } from '../../prop-types';
 import PageLayout from '../../components/page-layout';
@@ -15,19 +15,15 @@ function getFluidImage(image) {
 
 const Episode = ({ data }) => {
     const { title, num, description, src, date, duration, cover } = data.episodesJson;
+    const { name: artistName, url: artistUrl } = data.artistsJson;
 
-    // TODO: move attribution to episode data query
     return (
         <PageLayout>
             <h1 className={styles.title}>
                 <EpisodeTitle num={num} title={title} />
             </h1>
 
-            <ImageWithAttribution
-                src={getFluidImage(cover.image)}
-                text={'Isabel Anderson'}
-                url={'https://instagram.com/iamibo'}
-            />
+            <ImageWithAttribution src={getFluidImage(cover.image)} text={artistName} url={artistUrl} />
             <Player src={src} title={title} />
             <div className={styles.meta}>
                 <span className={styles.date}>{date}</span>
@@ -39,7 +35,7 @@ const Episode = ({ data }) => {
 };
 
 export const query = graphql`
-    query Episode($slug: String!) {
+    query EpisodeWithCover($slug: String!, $artist: String) {
         episodesJson(slug: { eq: $slug }) {
             title
             date
@@ -57,13 +53,21 @@ export const query = graphql`
                 }
             }
         }
+        artistsJson(name: { eq: $artist }) {
+            name
+            url
+        }
     }
 `;
 
 Episode.propTypes = {
     // TODO: update prop types to be fully inline with query
     data: shape({
-        episodesJson: episodePropType
+        episodesJson: shape(episodePropType),
+        artistJson: shape({
+            name: string,
+            url: string
+        })
     })
 };
 
