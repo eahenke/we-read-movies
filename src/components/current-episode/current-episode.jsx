@@ -1,9 +1,9 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
-import { Link } from 'gatsby';
 import Box from '../box';
 import Player from '../player';
 import EpisodeTitle from '../episode-title';
+import EpisodeLink from '../episode-link';
 import ImageWithAttribution from '../image-with-attribution';
 import styles from './current-episode.module.css';
 import { coverArtPropType } from '../../prop-types';
@@ -15,9 +15,9 @@ const CurrentEpisode = ({ num, title, date, src, description, cover, slug }) => 
         </Box>
         <Box className={styles.episodeInfo} inset="md">
             <span className="section-heading">
-                <Link to={`episodes/${slug}`}>
+                <EpisodeLink slug={`episodes/${slug}`}>
                     <EpisodeTitle num={num} title={title} />
-                </Link>
+                </EpisodeLink>
             </span>
             <div className={styles.meta}>
                 <span className={styles.date}>{date}</span>
