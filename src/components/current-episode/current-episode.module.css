@@ -1,6 +1,14 @@
 .episode-container {
-    max-width: 600px;
-    margin: var(--space-xl) 0;
+    margin: var(--space-xl) auto;  
+    display: flex;  
+}
+
+.cover-container {
+    flex: 1;
+}
+
+.episode-info {
+    flex: 1;
 }
 
 .divider {
@@ -17,7 +25,7 @@
     margin-right: var(--space-sm);
 }
 
-.playerContainer {
+.player-container {
     margin: var(--space-lg) 0;
 }
 
