@@ -19,3 +19,20 @@ export const episodeFullFragment = graphql`
         }
     }
 `;
+
+export const episodePreviewFragment = graphql`
+    fragment episodePreviewFragment on EpisodesJson {
+        title
+        date
+        num
+        cover {
+            image {
+                childImageSharp {
+                    fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    }
+`;
