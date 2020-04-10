@@ -33,7 +33,6 @@ CurrentEpisode.propTypes = {
     cover: shape(coverArtPropType),
     date: string.isRequired,
     description: string.isRequired,
-    duration: string.isRequired,
     num: number.isRequired,
     slug: string.isRequired,
     src: string,
