@@ -37,21 +37,7 @@ const Episode = ({ data }) => {
 export const query = graphql`
     query EpisodeWithCover($slug: String!, $artist: String) {
         episodesJson(slug: { eq: $slug }) {
-            title
-            date
-            description
-            duration
-            num
-            src
-            cover {
-                image {
-                    childImageSharp {
-                        fluid(maxWidth: 500) {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
-                }
-            }
+            ...episodeFullFragment
         }
         artistsJson(name: { eq: $artist }) {
             name
