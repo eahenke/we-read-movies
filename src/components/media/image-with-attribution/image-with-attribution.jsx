@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, shape } from 'prop-types';
 import Image from 'gatsby-image';
-import ExternalLink from '../navigation/external-link';
+import ExternalLink from '../../navigation/external-link';
 import styles from './image-with-attribution.module.css';
 
 const ImageWithAttribution = ({ src, text, url }) => (

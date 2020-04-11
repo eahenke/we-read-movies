@@ -3,7 +3,7 @@ import { string, arrayOf, shape } from 'prop-types';
 import cx from 'classnames';
 
 import styles from './bio.module.css';
-import Headshot from '../headshot';
+import Headshot from '../media/headshot';
 import Box from '../layout/box';
 import { socialPlatformPropType } from '../../prop-types';
 import SocialLink from '../navigation/social-link';

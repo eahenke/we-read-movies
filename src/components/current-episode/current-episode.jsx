@@ -1,10 +1,10 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
 import Box from '../layout/box';
-import Player from '../player';
+import Player from '../media/player';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';
-import ImageWithAttribution from '../image-with-attribution';
+import ImageWithAttribution from '../media/image-with-attribution';
 import styles from './current-episode.module.css';
 import { coverArtPropType } from '../../prop-types';
 

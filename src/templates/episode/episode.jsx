@@ -5,8 +5,8 @@ import { graphql } from 'gatsby';
 import { episodePropType } from '../../prop-types';
 import PageLayout from '../../components/page-layout';
 import EpisodeTitle from '../../components/episode-title';
-import Player from '../../components/player';
-import ImageWithAttribution from '../../components/image-with-attribution';
+import Player from '../../components/media/player';
+import ImageWithAttribution from '../../components/media/image-with-attribution';
 import styles from './episode.module.css';
 
 function getFluidImage(image) {
