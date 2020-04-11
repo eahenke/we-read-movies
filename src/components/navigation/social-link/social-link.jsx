@@ -1,8 +1,8 @@
 import React from 'react';
 import { number } from 'prop-types';
 import { FaFacebookF, FaInstagram, FaTwitter, FaItunesNote } from 'react-icons/fa';
-import { SOCIAL_PLATFORMS } from '../../constants';
-import { socialPlatformPropType } from '../../prop-types';
+import { SOCIAL_PLATFORMS } from '../../../constants';
+import { socialPlatformPropType } from '../../../prop-types';
 import ExternalLink from '../external-link';
 import styles from './social-link.module.css';
 

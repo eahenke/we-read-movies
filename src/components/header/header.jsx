@@ -5,7 +5,7 @@ import styles from './header.module.css';
 import Container from '../layout/container';
 import Logo from '../logo';
 import Nav from '../nav';
-import SocialLink from '../social-link';
+import SocialLink from '../navigation/social-link';
 import { SOCIAL_PLATFORMS } from '../../constants';
 
 const Header = () => {
