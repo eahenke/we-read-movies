@@ -9,6 +9,11 @@ export const episodeFullFragment = graphql`
         duration
         num
         src
+        topics
+        links {
+            text
+            url
+        }
         cover {
             image {
                 childImageSharp {

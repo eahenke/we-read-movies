@@ -42,7 +42,7 @@ body {
     background-color: var(--color-snow);
     font-family: var(--font-family-body);
     font-size: var(--font-size-medium);
-    line-height: 1.7;
+    line-height: 1.6;
     font-weight: var(--font-weight-body);
     font-style: normal;
     letter-spacing: 0em;
@@ -87,6 +87,7 @@ h6, .h6, .paragraph-heading {
     margin-bottom: var(--space-xs);
 }
 p, .body-text {
+    font-size: var(--font-size-large);
     margin-bottom: var(--space-lg);
 }
 img {

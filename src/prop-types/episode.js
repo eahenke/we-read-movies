@@ -1,4 +1,4 @@
-import { number, shape, string } from 'prop-types';
+import { number, shape, string, arrayOf } from 'prop-types';
 import movieInfoPropType from './movie-info';
 import coverArtPropType from './cover-art';
 
@@ -11,7 +11,14 @@ const episodePropType = {
     src: string.isRequired,
     hosting: string,
     movieInfo: shape(movieInfoPropType),
-    coverArt: shape(coverArtPropType)
+    coverArt: shape(coverArtPropType),
+    topics: arrayOf(string),
+    links: arrayOf(
+        shape({
+            text: string,
+            url: string.isRequired
+        })
+    )
 };
 
 export default episodePropType;
