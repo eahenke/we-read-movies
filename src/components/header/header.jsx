@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import styles from './header.module.css';
-import Container from '../container';
+import Container from '../layout/container';
 import Logo from '../logo';
 import Nav from '../nav';
 import SocialLink from '../social-link';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
 import Image from 'gatsby-image';
-import Box from '../box';
+import Box from '../layout/box';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';
 import { coverArtPropType } from '../../prop-types';

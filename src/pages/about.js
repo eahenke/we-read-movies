@@ -4,7 +4,7 @@ import HOSTS from '../data/hosts';
 import PageLayout from '../components/page-layout';
 import Seo from '../components/seo';
 import Bio from '../components/bio';
-import List from '../components/list';
+import List from '../components/layout/list';
 
 const SecondPage = () => (
     <PageLayout>

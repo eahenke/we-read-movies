@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
-import Box from '../box';
+import Box from '../layout/box';
 import Player from '../player';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';

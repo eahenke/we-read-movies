@@ -7,7 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Container from '../container';
+import Container from '../layout/container';
 import Header from '../header';
 
 const PageLayout = ({ children }) => (
