@@ -11,11 +11,13 @@ import { coverArtPropType } from '../../prop-types';
 const CurrentEpisode = ({ num, title, date, src, description, cover, slug }) => (
     <Box className={styles.episodeContainer}>
         <Box className={styles.coverContainer}>
-            <ImageWithAttribution src={cover.image.childImageSharp.fluid} text={cover.artist} />
+            <EpisodeLink slug={slug}>
+                <ImageWithAttribution src={cover.image.childImageSharp.fluid} text={cover.artist} />
+            </EpisodeLink>
         </Box>
         <Box className={styles.episodeInfo} inset="md">
             <span className="section-heading">
-                <EpisodeLink slug={`episodes/${slug}`}>
+                <EpisodeLink slug={slug}>
                     <EpisodeTitle num={num} title={title} />
                 </EpisodeLink>
             </span>

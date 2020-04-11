@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 
 export const episodeFullFragment = graphql`
     fragment episodeFullFragment on EpisodesJson {
+        slug
         title
         date
         description
@@ -22,6 +23,7 @@ export const episodeFullFragment = graphql`
 
 export const episodePreviewFragment = graphql`
     fragment episodePreviewFragment on EpisodesJson {
+        slug
         title
         date
         num
