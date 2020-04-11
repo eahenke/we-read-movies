@@ -1,6 +1,11 @@
 .episode-container {
     margin: var(--space-xl) auto;  
-    display: flex;  
+}
+
+@media screen and (min-width: 768px) {
+    .episode-container {
+        display: flex;
+    }
 }
 
 .cover-container {
