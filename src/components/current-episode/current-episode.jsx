@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
 import Box from '../layout/box';
-import Player from '../media/player';
+import AudioPlayer from '../media/audio-player';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';
 import ImageWithAttribution from '../media/image-with-attribution';
@@ -26,7 +26,7 @@ const CurrentEpisode = ({ num, title, date, src, description, cover, slug }) => 
             </div>
             <p className={styles.description}>{description}</p>
             <div className={styles.playerContainer}>
-                <Player src={src} title={title} />
+                <AudioPlayer src={src} />
             </div>
         </Box>
     </Box>

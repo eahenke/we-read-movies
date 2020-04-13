@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import { episodePropType } from '../../prop-types';
 import PageLayout from '../../components/page-layout';
 import EpisodeTitle from '../../components/episode-title';
-import Player from '../../components/media/player';
+import AudioPlayer from '../../components/media/audio-player';
 import ImageWithAttribution from '../../components/media/image-with-attribution';
 import ContentContainer from '../../components/layout/content-container';
 import styles from './episode.module.css';
@@ -27,7 +27,7 @@ const Episode = ({ data }) => {
                     <EpisodeTitle num={num} title={title} />
                 </h1>
                 <ImageWithAttribution src={getFluidImage(cover.image)} text={artistName} url={artistUrl} />
-                <Player src={src} title={title} />
+                <AudioPlayer src={src} />
                 <div className={styles.meta}>
                     <span className={styles.date}>{date}</span>
                     <span className={styles.duration}>Duration: {duration}</span>
