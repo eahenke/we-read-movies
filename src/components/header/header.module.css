@@ -2,6 +2,21 @@
     margin-bottom: var(--space-xl);
 }
 
+.inner-header {
+    padding: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-weight: 600;
+    font-size: var(--font-size-larger);
+    font-family: var(--font-family-heading);
+}
+
+.inner-header a {
+    color: var(--color-text-inverse);
+}
+
 .description {
     color: var(--color-text-secondary);
     text-align: center;
@@ -14,4 +29,5 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--color-text-inverse);
 }

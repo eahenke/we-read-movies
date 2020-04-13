@@ -1,12 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
-import styles from './header.module.css';
-import Container from '../layout/container';
-import Logo from '../logo';
+import { SOCIAL_PLATFORMS } from '../../constants';
 import Nav from '../nav';
 import SocialLink from '../navigation/social-link';
-import { SOCIAL_PLATFORMS } from '../../constants';
+import styles from './header.module.css';
 
 const Header = () => {
     const data = useStaticQuery(
@@ -14,7 +11,7 @@ const Header = () => {
             query {
                 site {
                     siteMetadata {
-                        description
+                        title
                         social {
                             FACEBOOK
                             INSTAGRAM
@@ -30,22 +27,19 @@ const Header = () => {
     const { siteMetadata } = data.site;
 
     return (
-        <header>
-            <Container>
-                <div className={styles.header}>
-                    <div className={styles.logoContainer}>
-                        <SocialLink platform={SOCIAL_PLATFORMS.FACEBOOK} url={siteMetadata.social.FACEBOOK} />
-                        <SocialLink platform={SOCIAL_PLATFORMS.INSTAGRAM} url={siteMetadata.social.INSTAGRAM} />
-                        <Logo />
-                        <SocialLink platform={SOCIAL_PLATFORMS.TWITTER} url={siteMetadata.social.TWITTER} />
-                        <SocialLink platform={SOCIAL_PLATFORMS.ITUNES} url={siteMetadata.social.ITUNES} />
-                    </div>
-                    <p className={styles.description}>{siteMetadata.description}</p>
-                    <div className={styles.navContainer}>
-                        <Nav />
-                    </div>
+        <header className={styles.header}>
+            <div className={styles.innerHeader}>
+                <span className={styles.siteTitle}>{siteMetadata.title}</span>
+                <div className={styles.logoContainer}>
+                    <SocialLink platform={SOCIAL_PLATFORMS.FACEBOOK} url={siteMetadata.social.FACEBOOK} />
+                    <SocialLink platform={SOCIAL_PLATFORMS.INSTAGRAM} url={siteMetadata.social.INSTAGRAM} />
+                    <SocialLink platform={SOCIAL_PLATFORMS.TWITTER} url={siteMetadata.social.TWITTER} />
+                    <SocialLink platform={SOCIAL_PLATFORMS.ITUNES} url={siteMetadata.social.ITUNES} />
                 </div>
-            </Container>
+            </div>
+            <div className={styles.navContainer}>
+                <Nav />
+            </div>
         </header>
     );
 };

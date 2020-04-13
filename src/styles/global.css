@@ -29,7 +29,11 @@
     --color-text-primary: rgba(0,0,0,0.87);
     --color-text-secondary: rgba(0,0,0,.54);
     --color-text-tertiary: rgba(0,0,0,.20);
+    --color-text-inverse: white;
     --color-snow: #f9fafb;
+    --color-background: var(--color-snow);
+    /* Temporary until theme colors chosen */
+    --color-primary: var(--color-text-primary);
 }
 
 html {
@@ -90,6 +94,11 @@ p, .body-text {
     font-size: var(--font-size-large);
     margin-bottom: var(--space-lg);
 }
+
+.text-inverse {
+    color: var(--color-text-inverse);
+}
+
 img {
     max-width: 100%;
     padding: 0;
