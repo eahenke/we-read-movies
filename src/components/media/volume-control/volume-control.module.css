@@ -1,0 +1,10 @@
+.volume-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 100px;
+}
+
+.volume-control-container {
+    margin-left: var(--space-md);
+}
