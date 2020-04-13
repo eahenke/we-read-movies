@@ -1,5 +1,6 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
+import Image from 'gatsby-image';
 import Box from '../layout/box';
 import AudioPlayer from '../media/audio-player';
 import EpisodeTitle from '../episode-title';
@@ -12,7 +13,7 @@ const CurrentEpisode = ({ num, title, date, src, description, cover, slug }) => 
     <Box className={styles.episodeContainer}>
         <Box className={styles.coverContainer}>
             <EpisodeLink slug={slug}>
-                <ImageWithAttribution src={cover.image.childImageSharp.fluid} text={cover.artist} />
+                <Image fluid={cover.image.childImageSharp.fluid} />
             </EpisodeLink>
         </Box>
         <Box className={styles.episodeInfo} inset="md">
