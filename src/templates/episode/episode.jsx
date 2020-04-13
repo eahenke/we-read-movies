@@ -1,12 +1,11 @@
 import React from 'react';
-
 import { shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
 import { episodePropType } from '../../prop-types';
 import PageLayout from '../../components/page-layout';
 import EpisodeTitle from '../../components/episode-title';
+import EpisodeCover from '../../components/episode-cover';
 import AudioPlayer from '../../components/media/audio-player';
-import ImageWithAttribution from '../../components/media/image-with-attribution';
 import ContentContainer from '../../components/layout/content-container';
 import styles from './episode.module.css';
 import TopicsDiscussed from '../../components/topics-discussed';
@@ -26,7 +25,7 @@ const Episode = ({ data }) => {
                 <h1 className={styles.title}>
                     <EpisodeTitle num={num} title={title} />
                 </h1>
-                <ImageWithAttribution src={getFluidImage(cover.image)} text={artistName} url={artistUrl} />
+                <EpisodeCover src={getFluidImage(cover.image)} text={artistName} url={artistUrl} />
                 <AudioPlayer src={src} />
                 <div className={styles.meta}>
                     <span className={styles.date}>{date}</span>
