@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import cx from 'classnames';
 import { useAudio } from 'react-use';
@@ -15,6 +15,16 @@ const AudioPlayer = ({ src }) => {
         autoPlay: false
     });
 
+    const [time, setTime] = useState(state.time);
+    useEffect(() => {
+        setTime(state.time);
+    }, [setTime, state.time]);
+
+    function seek(val) {
+        setTime(val);
+        controls.seek(val);
+    }
+
     return (
         <div>
             {audio}
@@ -27,7 +37,7 @@ const AudioPlayer = ({ src }) => {
                 </div>
                 <div className={styles.player}>
                     <div className={styles.upperControls}>
-                        <span className={cx(styles.time)}>{secondsToTimestamp(state.time)}</span>
+                        <span className={cx(styles.time)}>{secondsToTimestamp(time)}</span>
                         <span className={cx(styles.time)}>{secondsToTimestamp(state.duration)}</span>
                     </div>
                     <div className={styles.progressContainer}>
@@ -36,11 +46,11 @@ const AudioPlayer = ({ src }) => {
                             onChange={value => {
                                 const isPaused = state.paused;
                                 if (!isPaused) controls.pause();
-                                controls.seek(value);
+                                seek(value);
                                 if (!isPaused) controls.play();
                             }}
                             step={0.01}
-                            value={state.time}
+                            value={time}
                         />
                     </div>
                     <div className={styles.lowerControls}>
