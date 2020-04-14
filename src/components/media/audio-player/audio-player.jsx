@@ -8,6 +8,7 @@ import PlayPauseButton from '../play-pause-button';
 import Progress from '../progress';
 import styles from './audio-player.module.css';
 import VolumeControl from '../volume-control';
+import ProgressPreview from '../progress-preview/progress-preview';
 
 const AudioPlayer = ({ src }) => {
     const [audio, state, controls] = useAudio({
@@ -39,6 +40,7 @@ const AudioPlayer = ({ src }) => {
                                 controls.seek(value);
                                 if (!isPaused) controls.play();
                             }}
+                            PreviewComponent={ProgressPreview}
                             step={0.01}
                             value={state.time}
                         />

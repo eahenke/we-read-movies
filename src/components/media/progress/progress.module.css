@@ -108,3 +108,23 @@
   transition: box-shadow .3s ease,-webkit-box-shadow .3s ease;
   background-image: var(--track-progress);
 }
+
+/* Preview */
+.progress-container {
+  position: relative;
+  padding-bottom: var(--space-xs);
+}
+
+.preview {
+  position: absolute;
+  top: -1.5rem;
+  width: 40px;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 2px;
+  font-size: var(--font-size-smallest);
+  background-color: rgba(0,0,0,.8);
+  color: var(--color-text-inverse);
+  font-family: var(--font-family-heading);
+  border-radius: 2px;
+}
