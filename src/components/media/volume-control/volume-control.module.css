@@ -5,6 +5,6 @@
     max-width: 100px;
 }
 
-.volume-control-container {
-    margin-left: var(--space-md);
+.volume-icon {
+    margin-right: var(--space-md);
 }

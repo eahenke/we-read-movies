@@ -1,3 +1,7 @@
+.audio-player {
+    margin: var(--space-lg) 0;
+}
+
 .player-container {
     display: flex;
     width: 100%;

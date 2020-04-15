@@ -27,7 +27,7 @@ const AudioPlayer = ({ src }) => {
     }
 
     return (
-        <div>
+        <div className={styles.audioPlayer}>
             {audio}
             <Box className={styles.playerContainer}>
                 <div className={styles.playButton}>

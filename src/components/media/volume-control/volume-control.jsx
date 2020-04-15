@@ -10,11 +10,11 @@ const VolumeControl = ({ className, size, onChange, onMute, onUnmute, isMuted, v
 
     return (
         <div className={styles.volumeContainer}>
-            <button onClick={() => (isMuted ? onUnmute() : onMute())}>
+            <button className={styles.volumeIcon} onClick={() => (isMuted ? onUnmute() : onMute())}>
                 <VolumeIcon size={16} />
             </button>
             <Progress
-                className={cx(styles.volumeControlContainer, className)}
+                className={cx(className)}
                 max={1}
                 onChange={val => {
                     onUnmute();
