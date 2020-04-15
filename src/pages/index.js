@@ -9,13 +9,17 @@ import CurrentEpisode from '../components/current-episode';
 import EpisodePreview from '../components/episode-preview';
 import styles from './index.module.css';
 
+function getFluidImage(image) {
+    return image.childImageSharp.fluid;
+}
+
 const IndexPage = ({ data }) => {
     const currentEpisode = data.currentEpisodes[0];
     const { episodes } = data;
 
     return (
         <PageLayout>
-            <Seo title="Home" />
+            <Seo image={getFluidImage(currentEpisode.cover.image).src} title="Home" />
             <h1>Current Episode</h1>
             <CurrentEpisode {...currentEpisode} />
             <div className={styles.episodeList}>

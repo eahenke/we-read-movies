@@ -10,22 +10,25 @@ import ContentContainer from '../../components/layout/content-container';
 import styles from './episode.module.css';
 import TopicsDiscussed from '../../components/topics-discussed';
 import LinksDiscussed from '../../components/links-discussed';
+import Seo from '../../components/seo';
 
 function getFluidImage(image) {
     return image.childImageSharp.fluid;
 }
 
 const Episode = ({ data }) => {
-    const { title, num, description, src, date, duration, topics = [], links = [], cover } = data.episodesJson;
     const { name: artistName, url: artistUrl } = data.artistsJson;
+    const { title, num, description, src, date, duration, topics = [], links = [], cover } = data.episodesJson;
+    const imageFluid = getFluidImage(cover.image);
 
     return (
         <PageLayout>
+            <Seo description={description} image={imageFluid.src} title={`Episode ${num}: ${title}`} />
             <ContentContainer>
                 <h1 className={styles.title}>
                     <EpisodeTitle num={num} title={title} />
                 </h1>
-                <EpisodeCover src={getFluidImage(cover.image)} text={artistName} url={artistUrl} />
+                <EpisodeCover src={imageFluid} text={artistName} url={artistUrl} />
                 <AudioPlayer src={src} />
                 <div className={styles.meta}>
                     <span className={styles.date}>{date}</span>
