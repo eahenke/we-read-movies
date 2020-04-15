@@ -1,27 +1,22 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node } from 'prop-types';
 import Container from '../layout/container';
 import Header from '../header';
 
 const PageLayout = ({ children }) => (
-    <>
+    <div className="page-layout">
         <Header />
-        <Container>
-            <main>{children}</main>
-            <footer>© {new Date().getFullYear()}</footer>
-        </Container>
-    </>
+        <main>
+            <Container>{children}</Container>
+        </main>
+        <footer>
+            <Container>© {new Date().getFullYear()}</Container>
+        </footer>
+    </div>
 );
 
 PageLayout.propTypes = {
-    children: PropTypes.node.isRequired
+    children: node.isRequired
 };
 
 export default PageLayout;

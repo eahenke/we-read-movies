@@ -41,6 +41,10 @@ html {
     font-size: 62.5%;
 }
 
+html, body {
+    min-height: 100%;
+}
+
 body {
     color: var(--color-text-primary);
     background-color: var(--color-snow);
@@ -50,6 +54,18 @@ body {
     font-weight: var(--font-weight-body);
     font-style: normal;
     letter-spacing: 0em;
+    min-height: 100vh;
+}
+
+/* Page Layout */
+.page-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-layout main {
+    flex: 1 1 auto;
 }
 
 /* Headings */
@@ -103,6 +119,26 @@ img {
     max-width: 100%;
     padding: 0;
     margin: 0;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--color-primary);
+    /* Tempoary hack to lighten color, until colors are determined */
+    opacity: 0.5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Spacing */
