@@ -3,14 +3,6 @@
     justify-content: flex-start;
     align-content: center;
     margin: var(--space-md) 0;
-
-}
-
-@media (min-width: 758px) {
-    .bio {
-        max-width: 80%;
-        margin: var(--space-md) auto;
-    }
 }
 
 .titleBar {
