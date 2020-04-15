@@ -31,3 +31,8 @@
     align-items: center;
     color: var(--color-text-inverse);
 }
+
+.site-title a:hover {
+    /* Prevent link highlighting */
+    opacity: 1;
+}

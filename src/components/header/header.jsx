@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { SOCIAL_PLATFORMS } from '../../constants';
 import Nav from '../nav';
 import SocialLink from '../navigation/social-link';
@@ -29,7 +29,9 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.innerHeader}>
-                <span className={styles.siteTitle}>{siteMetadata.title}</span>
+                <span className={styles.siteTitle}>
+                    <Link to="/">{siteMetadata.title}</Link>
+                </span>
                 <div className={styles.logoContainer}>
                     <SocialLink platform={SOCIAL_PLATFORMS.FACEBOOK} url={siteMetadata.social.FACEBOOK} />
                     <SocialLink platform={SOCIAL_PLATFORMS.INSTAGRAM} url={siteMetadata.social.INSTAGRAM} />
