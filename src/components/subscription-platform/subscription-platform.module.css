@@ -1,0 +1,10 @@
+.platform {
+    text-align: center;
+}
+
+.name {
+    display: block;
+    margin-top: var(--space-md);
+    font-family: var(--font-family-heading);
+    letter-spacing: 1px;
+}
