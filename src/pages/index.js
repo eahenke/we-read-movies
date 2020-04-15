@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
     return (
         <PageLayout>
             <Seo image={getFluidImage(currentEpisode.cover.image).src} title="Home" />
-            <h1>Current Episode</h1>
+            <h1 className={styles.currentEpisodeHeading}>Current Episode</h1>
             <CurrentEpisode {...currentEpisode} />
             <div className={styles.episodeList}>
                 {episodes.map(ep => (

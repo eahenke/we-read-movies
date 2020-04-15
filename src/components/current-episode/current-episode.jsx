@@ -5,7 +5,6 @@ import Box from '../layout/box';
 import AudioPlayer from '../media/audio-player';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';
-import ImageWithAttribution from '../media/image-with-attribution';
 import styles from './current-episode.module.css';
 import { coverArtPropType } from '../../prop-types';
 

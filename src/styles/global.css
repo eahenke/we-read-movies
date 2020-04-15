@@ -66,27 +66,36 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .page-heading, .section-he
 
 }
 h1, .h1 {
-    font-size: var(--font-size-ultra);
-    line-height: 9rem;
-    margin-bottom: var(--space-xl);
+    font-size: var(--font-size-jumbo);
+    line-height: 1.5;
+    margin-bottom: var(--space-lg);
 }
+
+@media screen and (min-width: 758px) {
+    h1, .h1 {
+        font-size: var(--font-size-mega);
+        line-height: 6rem;
+        margin-bottom: var(--space-xl);
+    }
+}
+
 h2, .h2, .page-heading {
-    font-size: var(--font-size-mega);
-    line-height: 6rem;
-    margin-bottom: var(--space-xl);
-}
-h3, .h3 {
     font-size: var(--font-size-jumbo);
     line-height: 6rem;
     margin-bottom: var(--space-lg);
 }
-h4, .h4, .section-heading {
+h3, .h3, .section-heading {
     font-size: var(--font-size-largest);
     line-height: 6rem;
     margin-bottom: var(--space-md);
 }
-h5, .h5 {
+h4, .h4 {
     font-size: var(--font-size-larger);
+    line-height: 6rem;
+    margin-bottom: var(--space-md);
+}
+h5, .h5 {
+    font-size: var(--font-size-large);
     line-height: 3rem;
     margin-bottom: var(--space-sm);
 }
