@@ -57,17 +57,6 @@ body {
     min-height: 100vh;
 }
 
-/* Page Layout */
-.page-layout {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.page-layout main {
-    flex: 1 1 auto;
-}
-
 /* Headings */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .page-heading, .section-heading, .paragraph-heading {
     font-family: var(--font-family-heading);
