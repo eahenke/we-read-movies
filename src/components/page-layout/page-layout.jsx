@@ -3,12 +3,16 @@ import { node } from 'prop-types';
 import Container from '../layout/container';
 import Header from '../header';
 import styles from './page-layout.module.css';
+import ColorPicker from '../dev-only/color-picker';
 
 const PageLayout = ({ children }) => (
     <div className={styles.pageLayout}>
         <Header />
         <main>
-            <Container>{children}</Container>
+            <Container>
+                <ColorPicker />
+                {children}
+            </Container>
         </main>
         <footer className={styles.footer}>© {new Date().getFullYear()}</footer>
     </div>
