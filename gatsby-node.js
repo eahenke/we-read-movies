@@ -24,7 +24,7 @@ async function createEpisodePages({ actions, graphql }) {
 
     results.data.allEpisodesJson.edges.forEach(({ node }) =>
         actions.createPage({
-            path: `episodes/${node.slug}`,
+            path: `episodes/${node.slug.toLowerCase()}`,
             component: path.resolve('./src/templates/episode/episode.jsx'),
             context: {
                 // Episode ID
