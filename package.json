@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "eslint-config": "git@github.com:eahenke/eslint-config.git",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [],

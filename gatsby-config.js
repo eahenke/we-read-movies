@@ -1,5 +1,6 @@
 /* eslint-disable import/no-commonjs */
 module.exports = {
+    pathPrefix: '/we-read-movies',
     siteMetadata: {
         title: 'We Read Movies',
         description: 'A podcast about bad gay movies',
