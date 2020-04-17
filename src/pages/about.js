@@ -17,10 +17,9 @@ const AboutPage = ({ data }) => {
             <ContentContainer>
                 <h1>About</h1>
                 <p>
-                    We Read Movies is dolor sit amet, consectetur adipiscing elit. Aenean eu lacus et dolor varius
-                    auctor nec id metus. Phasellus nec elementum neque. Class aptent taciti sociosqu ad litora torquent
-                    per conubia nostra, per inceptos himenaeos. Praesent maximus quis ligula vitae vestibulum. Nullam
-                    eget ligula molestie.
+                    We Read Movies is a podcast where three friends watch the very worst of gay cinema so that you don't
+                    have to. Then we discuss these films in agonizing but hilarious detail for your listening pleasure.
+                    At We Read Movies, we don't just watch movies. We read them, to filth.
                 </p>
                 <h2 className="section-heading">Your Beautiful Hosts</h2>
                 <List>
