@@ -11,10 +11,7 @@ import styles from './episode.module.css';
 import TopicsDiscussed from '../../components/topics-discussed';
 import LinksDiscussed from '../../components/links-discussed';
 import Seo from '../../components/seo';
-
-function getFluidImage(image) {
-    return image.childImageSharp.fluid;
-}
+import { getFluidImage } from '../../util';
 
 const Episode = ({ data }) => {
     const { name: artistName, url: artistUrl } = data.artistsJson;
