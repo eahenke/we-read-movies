@@ -33,12 +33,13 @@
   "keywords": [],
   "scripts": {
     "build": "npm run clean && gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop  -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint .",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "npm run lint",
     "deploy:gh": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }
