@@ -58,7 +58,6 @@ export const AboutPageQuery = graphql`
         hosts: allHostsJson {
             edges {
                 node {
-                    imageSrc
                     name
                     text
                     social {
