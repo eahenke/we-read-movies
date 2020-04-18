@@ -7,11 +7,8 @@ import PageLayout from '../components/page-layout';
 import Seo from '../components/seo';
 import CurrentEpisode from '../components/current-episode';
 import EpisodePreview from '../components/episode-preview';
+import { getFluidImage } from '../util';
 import styles from './index.module.css';
-
-function getFluidImage(image) {
-    return image.childImageSharp.fluid;
-}
 
 const IndexPage = ({ data }) => {
     const currentEpisode = data.currentEpisodes[0];

@@ -7,6 +7,7 @@ import Seo from '../components/seo';
 import Bio from '../components/bio';
 import List from '../components/layout/list';
 import { withFlattenedQuery } from '../hocs';
+import { getFluidImage } from '../util';
 
 const AboutPage = ({ data }) => {
     const { hosts } = data;
@@ -23,9 +24,11 @@ const AboutPage = ({ data }) => {
                 </p>
                 <h2 className="section-heading">Your Beautiful Hosts</h2>
                 <List>
-                    {hosts.map(({ name, imageSrc, text, social = [] }) => (
-                        <Bio imageSrc={imageSrc} key={name} name={name} socialPlatforms={social} text={text} />
-                    ))}
+                    {hosts.map(({ name, text, image, social = [] }) => {
+                        const fluidImage = getFluidImage(image);
+
+                        return <Bio image={fluidImage} key={name} name={name} socialPlatforms={social} text={text} />;
+                    })}
                 </List>
             </ContentContainer>
         </PageLayout>
@@ -36,7 +39,7 @@ AboutPage.propTypes = {
     data: shape({
         hosts: arrayOf(
             shape({
-                imageSrc: string,
+                image: shape({}),
                 name: string.isRequired,
                 text: string.isRequired,
                 social: arrayOf(
@@ -61,6 +64,13 @@ export const AboutPageQuery = graphql`
                     social {
                         platform
                         url
+                    }
+                    image {
+                        childImageSharp {
+                            fluid(maxWidth: 200) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
                     }
                 }
             }
