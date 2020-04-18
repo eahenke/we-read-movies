@@ -8,13 +8,9 @@ import Box from '../layout/box';
 import { socialPlatformPropType } from '../../prop-types';
 import SocialLink from '../navigation/social-link';
 
-const Bio = ({ name, imageSrc, text, socialPlatforms = [] }) => (
+const Bio = ({ name, image, text, socialPlatforms = [] }) => (
     <div className={styles.bio}>
-        {imageSrc && (
-            <Box className={styles.imageContainer}>
-                <Headshot alt={name} src={imageSrc} />
-            </Box>
-        )}
+        <Box className={styles.imageContainer}>{image && <Headshot alt={name} src={image} />}</Box>
         <Box className={styles.textContainer}>
             <div className={cx(styles.titleBar, 'paragraph-heading')}>
                 <span className={styles.bioTitle}>{name}</span>
@@ -30,7 +26,7 @@ const Bio = ({ name, imageSrc, text, socialPlatforms = [] }) => (
 );
 
 Bio.propTypes = {
-    imageSrc: string,
+    image: shape({}),
     name: string.isRequired,
     socialPlatforms: arrayOf(shape(socialPlatformPropType)),
     text: string.isRequired
