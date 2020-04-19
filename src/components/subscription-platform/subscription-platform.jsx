@@ -1,14 +1,15 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { FaItunesNote, FaSpotify, FaRss } from 'react-icons/fa';
+import { GooglePodcast, ItunesNote, Rss, Spotify } from '../icons';
 import Box from '../layout/box';
 import ExternalLink from '../navigation/external-link';
 import styles from './subscription-platform.module.css';
 
 const ICON_COMPONENTS = {
-    SPOTIFY: FaSpotify,
-    ITUNES: FaItunesNote,
-    RSS: FaRss
+    SPOTIFY: Spotify,
+    ITUNES: ItunesNote,
+    RSS: Rss,
+    'GOOGLE PODCASTS': GooglePodcast
 };
 
 function getIcon(name = '') {

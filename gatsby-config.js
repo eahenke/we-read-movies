@@ -5,12 +5,20 @@ module.exports = {
         title: 'We Read Movies',
         description: 'A podcast about bad gay movies',
         author: 'Eric Henke',
-        social: {
-            FACEBOOK: 'http://facebook.com',
-            TWITTER: 'http://twitter.com',
-            INSTAGRAM: 'http://instagram.com',
-            ITUNES: 'http://itunes.com'
-        }
+        social: [
+            {
+                name: 'FACEBOOK',
+                url: ''
+            },
+            {
+                name: 'TWITTER',
+                url: ''
+            },
+            {
+                name: 'INSTAGRAM',
+                url: ''
+            }
+        ]
     },
     plugins: [
         'gatsby-plugin-react-helmet',

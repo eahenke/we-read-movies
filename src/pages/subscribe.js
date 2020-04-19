@@ -10,12 +10,14 @@ import styles from './subscribe.module.css';
 const SubscribePage = ({ data }) => {
     const { platforms } = data;
 
+    const publishedPlatforms = platforms.filter(p => !!p.url);
+
     return (
         <PageLayout>
             <Seo title="Subscribe" />
             <h1>Subscribe</h1>
             <div className={styles.platformList}>
-                {platforms.map(platform => (
+                {publishedPlatforms.map(platform => (
                     <div className={styles.platformWrapper} key={platform.name}>
                         <SubscriptionPlatform name={platform.name} url={platform.url} />
                     </div>

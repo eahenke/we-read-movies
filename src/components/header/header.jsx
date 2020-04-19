@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { SOCIAL_PLATFORMS } from '../../constants';
 import Nav from '../nav';
 import SocialLink from '../navigation/social-link';
 import styles from './header.module.css';
@@ -13,10 +12,8 @@ const Header = () => {
                     siteMetadata {
                         title
                         social {
-                            FACEBOOK
-                            INSTAGRAM
-                            TWITTER
-                            ITUNES
+                            name
+                            url
                         }
                     }
                 }
@@ -25,6 +22,7 @@ const Header = () => {
     );
 
     const { siteMetadata } = data.site;
+    const socialMedia = siteMetadata.social.filter(s => !!s.url);
 
     return (
         <header className={styles.header}>
@@ -33,10 +31,9 @@ const Header = () => {
                     <Link to="/">{siteMetadata.title}</Link>
                 </span>
                 <div className={styles.logoContainer}>
-                    <SocialLink platform={SOCIAL_PLATFORMS.FACEBOOK} url={siteMetadata.social.FACEBOOK} />
-                    <SocialLink platform={SOCIAL_PLATFORMS.INSTAGRAM} url={siteMetadata.social.INSTAGRAM} />
-                    <SocialLink platform={SOCIAL_PLATFORMS.TWITTER} url={siteMetadata.social.TWITTER} />
-                    <SocialLink platform={SOCIAL_PLATFORMS.ITUNES} url={siteMetadata.social.ITUNES} />
+                    {socialMedia.map(({ name, url }) => (
+                        <SocialLink key={name} platform={name} url={url} />
+                    ))}
                 </div>
             </div>
             <div className={styles.navContainer}>
