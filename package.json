@@ -34,11 +34,11 @@
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "gatsby clean",
-    "develop": "gatsby develop  -H 0.0.0.0",
+    "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "lint": "eslint .",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -H 0.0.0.0",
     "test": "npm run lint",
     "deploy:gh": "gatsby build --prefix-paths && gh-pages -d public"
   }
