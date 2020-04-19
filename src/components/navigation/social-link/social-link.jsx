@@ -1,16 +1,16 @@
 import React from 'react';
 import { number } from 'prop-types';
-import { FaFacebookF, FaInstagram, FaTwitter, FaItunesNote } from 'react-icons/fa';
+import { Facebook, Instagram, Twitter, ItunesNote } from '../../icons';
 import { SOCIAL_PLATFORMS } from '../../../constants';
 import { socialPlatformPropType } from '../../../prop-types';
 import ExternalLink from '../external-link';
 import styles from './social-link.module.css';
 
 const ICON_COMPONENTS = {
-    [SOCIAL_PLATFORMS.TWITTER]: FaTwitter,
-    [SOCIAL_PLATFORMS.FACEBOOK]: FaFacebookF,
-    [SOCIAL_PLATFORMS.INSTAGRAM]: FaInstagram,
-    [SOCIAL_PLATFORMS.ITUNES]: FaItunesNote
+    [SOCIAL_PLATFORMS.TWITTER]: Twitter,
+    [SOCIAL_PLATFORMS.FACEBOOK]: Facebook,
+    [SOCIAL_PLATFORMS.INSTAGRAM]: Instagram,
+    [SOCIAL_PLATFORMS.ITUNES]: ItunesNote
 };
 
 const SocialLink = ({ platform, size, url }) => {

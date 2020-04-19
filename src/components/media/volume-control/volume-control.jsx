@@ -1,12 +1,12 @@
 import React from 'react';
 import { bool, func, number, string } from 'prop-types';
 import cx from 'classnames';
-import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
+import { VolumeUp, VolumeMute } from '../../icons';
 import Progress from '../progress';
 import styles from './volume-control.module.css';
 
 const VolumeControl = ({ className, size, onChange, onMute, onUnmute, isMuted, value }) => {
-    const VolumeIcon = isMuted ? FaVolumeMute : FaVolumeUp;
+    const VolumeIcon = isMuted ? VolumeMute : VolumeUp;
 
     return (
         <div className={styles.volumeContainer}>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChromePicker } from 'react-color';
-import { FaPalette } from 'react-icons/fa';
+import { Palette } from '../../icons';
 
 const ColorPicker = () => {
     const [show, setShow] = useState(false);
@@ -25,7 +25,7 @@ const ColorPicker = () => {
                     setShow(!show);
                 }}
             >
-                <FaPalette />
+                <Palette />
             </button>
             <div style={{ position: 'absolute', top: 40, left: 40 }}>{show && <ChromePicker {...colorProps} />}</div>
         </div>
