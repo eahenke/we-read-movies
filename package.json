@@ -33,6 +33,7 @@
   "keywords": [],
   "scripts": {
     "build": "npm run clean && gatsby build",
+    "build:prefix": "npm run clean && gatsby build --prefix-paths",
     "clean": "gatsby clean",
     "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -40,6 +41,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve -H 0.0.0.0",
     "test": "npm run lint",
-    "deploy:gh": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy:gh": "npm run build:prefix && gh-pages -d public"
   }
 }
