@@ -25,6 +25,9 @@ const CurrentEpisode = ({ num, title, date, src, description, cover, slug }) => 
                 <span className={styles.date}>{date}</span>
             </div>
             <p className={styles.description}>{description}</p>
+            <span className={styles.readMore}>
+                <EpisodeLink slug={slug}>Read more</EpisodeLink>
+            </span>
             <div className={styles.playerContainer}>
                 <AudioPlayer src={src} />
             </div>
