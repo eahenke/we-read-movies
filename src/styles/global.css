@@ -31,9 +31,11 @@
     --color-text-tertiary: rgba(0,0,0,.20);
     --color-text-inverse: white;
     --color-snow: #f9fafb;
+    --color-burn-book-pink: #e36fb0;
     --color-background: var(--color-snow);
-    /* Temporary until theme colors chosen */
-    --color-primary: var(--color-text-primary);
+    
+    /* Theme colors */
+    --color-primary: var(--color-burn-book-pink);
 }
 
 html {
