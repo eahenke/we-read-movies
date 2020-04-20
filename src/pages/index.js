@@ -40,14 +40,14 @@ IndexPage.propTypes = {
 
 export const IndexPageQuery = graphql`
     query CurrentEpisode {
-        currentEpisodes: allEpisodesJson(sort: { fields: [date], order: ASC }, limit: 1) {
+        currentEpisodes: allEpisodesJson(sort: { fields: [num], order: DESC }, limit: 1) {
             edges {
                 node {
                     ...episodeFullFragment
                 }
             }
         }
-        episodes: allEpisodesJson(sort: { fields: [date], order: ASC }, skip: 1) {
+        episodes: allEpisodesJson(sort: { fields: [num], order: DESC }, skip: 1) {
             edges {
                 node {
                     ...episodePreviewFragment
