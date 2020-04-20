@@ -19,6 +19,7 @@ const IndexPage = ({ data }) => {
             <Seo image={getFluidImage(currentEpisode.cover.image).src} title="Home" />
             <h1 className={styles.currentEpisodeHeading}>Current Episode</h1>
             <CurrentEpisode {...currentEpisode} />
+            <h2 className="section-heading">Past Epsiodes</h2>
             <div className={styles.episodeList}>
                 {episodes.map(ep => (
                     <div className={styles.previewWrapper} key={ep.title}>
@@ -39,14 +40,14 @@ IndexPage.propTypes = {
 
 export const IndexPageQuery = graphql`
     query CurrentEpisode {
-        currentEpisodes: allEpisodesJson(sort: { fields: [date], order: DESC }, limit: 1) {
+        currentEpisodes: allEpisodesJson(sort: { fields: [date], order: ASC }, limit: 1) {
             edges {
                 node {
                     ...episodeFullFragment
                 }
             }
         }
-        episodes: allEpisodesJson(sort: { fields: [date], order: DESC }, skip: 1) {
+        episodes: allEpisodesJson(sort: { fields: [date], order: ASC }, skip: 1) {
             edges {
                 node {
                     ...episodePreviewFragment
