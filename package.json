@@ -45,6 +45,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve -H 0.0.0.0",
     "test": "npm run lint",
-    "deploy:gh": "npm run build:prefix && gh-pages -d public"
+    "deploy:gh": "npm run build:prefix && node ./scripts/deploy-gh.js"
   }
 }
