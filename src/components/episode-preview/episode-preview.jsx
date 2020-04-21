@@ -9,9 +9,11 @@ import styles from './episode-preview.module.css';
 
 const EpisodePreview = ({ cover, date, num, slug, title }) => (
     <Box>
-        <Box>
-            <Image fluid={cover.image.childImageSharp.fluid} />
-        </Box>
+        <EpisodeLink slug={slug}>
+            <Box>
+                <Image fluid={cover.image.childImageSharp.fluid} />
+            </Box>
+        </EpisodeLink>
         <Box>
             <span className="paragraph-heading">
                 <EpisodeLink slug={slug}>
