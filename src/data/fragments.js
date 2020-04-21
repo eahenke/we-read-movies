@@ -35,7 +35,7 @@ export const episodePreviewFragment = graphql`
         cover {
             image {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 500) {
                         ...GatsbyImageSharpFluid
                     }
                 }
