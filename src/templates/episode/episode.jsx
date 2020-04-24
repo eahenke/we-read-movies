@@ -25,7 +25,7 @@ const Episode = ({ data }) => {
                 <h1 className={styles.title}>
                     <EpisodeTitle num={num} title={title} />
                 </h1>
-                <EpisodeCover src={imageFluid} text={artistName} url={artistUrl} />
+                <EpisodeCover main={true} src={imageFluid} text={artistName} url={artistUrl} />
                 <AudioPlayer src={src} />
                 <div className={styles.meta}>
                     <span className={styles.date}>{date}</span>

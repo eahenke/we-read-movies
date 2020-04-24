@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
-import Image from 'gatsby-image';
 import Box from '../layout/box';
+import EpisodeCover from '../episode-cover';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';
 import { coverArtPropType } from '../../prop-types';
@@ -11,7 +11,7 @@ const EpisodePreview = ({ cover, date, num, slug, title }) => (
     <Box>
         <EpisodeLink slug={slug}>
             <Box>
-                <Image fluid={cover.image.childImageSharp.fluid} />
+                <EpisodeCover src={cover.image.childImageSharp.fluid} />
             </Box>
         </EpisodeLink>
         <Box>

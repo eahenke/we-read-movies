@@ -3,6 +3,11 @@
     background-color: white;
 }
 
+.default-cover {
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
 .episode-cover {
     width: 50%;
     margin: 0 auto;

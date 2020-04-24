@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, number, shape } from 'prop-types';
-import Image from 'gatsby-image';
 import Box from '../layout/box';
 import AudioPlayer from '../media/audio-player';
+import EpisodeCover from '../episode-cover';
 import EpisodeTitle from '../episode-title';
 import EpisodeLink from '../episode-link';
 import styles from './current-episode.module.css';
@@ -12,7 +12,7 @@ const CurrentEpisode = ({ num, title, date, src, description, cover, slug }) => 
     <Box className={styles.episodeContainer}>
         <Box className={styles.coverContainer}>
             <EpisodeLink slug={slug}>
-                <Image fluid={cover.image.childImageSharp.fluid} />
+                <EpisodeCover src={cover.image.childImageSharp.fluid} />
             </EpisodeLink>
         </Box>
         <Box className={styles.episodeInfo} inset="md">
