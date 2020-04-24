@@ -32,7 +32,7 @@ EpisodeCover.propTypes = {
     logo: shape({}).isRequired,
     main: bool,
     src: shape({}).isRequired,
-    text: string.isRequired,
+    text: string,
     url: string
 };
 
