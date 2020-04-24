@@ -26,16 +26,18 @@
     --font-weight-body: 400;
 
     /* Colors */
+    --color-snow: rgba(249, 250, 251, 0.5);
+    --color-burn-book-pink: rgba(204,92,105, 1);
+
+    /* Typography colors */
     --color-text-primary: rgba(0,0,0,0.87);
     --color-text-secondary: rgba(0,0,0,.54);
     --color-text-tertiary: rgba(0,0,0,.20);
     --color-text-inverse: white;
-    --color-snow: #f9fafb;
-    --color-burn-book-pink: #e36fb0;
-    --color-background: var(--color-snow);
     
     /* Theme colors */
     --color-primary: var(--color-burn-book-pink);
+    --color-background: var(--color-snow);
 }
 
 html {
