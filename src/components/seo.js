@@ -6,11 +6,12 @@
  */
 
 import React from 'react';
-import { arrayOf, object, string } from 'prop-types';
+import { arrayOf, object, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { withLogo } from '../hocs';
 
-function SEO({ description, lang, meta, title, image }) {
+function SEO({ description, lang, meta, title, image, logo }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -27,22 +28,21 @@ function SEO({ description, lang, meta, title, image }) {
 
     const metaDescription = description || site.siteMetadata.description;
 
-    const imageMeta = image
-        ? [
-              {
-                  name: 'image',
-                  content: image
-              },
-              {
-                  name: 'og:image',
-                  content: image
-              },
-              {
-                  name: 'twitter:image',
-                  content: image
-              }
-          ]
-        : [];
+    const metaImageSrc = image || logo.src;
+    const imageMeta = [
+        {
+            name: 'image',
+            content: metaImageSrc
+        },
+        {
+            name: 'og:image',
+            content: metaImageSrc
+        },
+        {
+            name: 'twitter:image',
+            content: metaImageSrc
+        }
+    ];
     const metaData = [
         {
             name: 'description',
@@ -101,8 +101,9 @@ SEO.propTypes = {
     description: string,
     image: string,
     lang: string,
+    logo: shape({}),
     meta: arrayOf(object),
     title: string.isRequired
 };
 
-export default SEO;
+export default withLogo(SEO);

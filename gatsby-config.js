@@ -3,7 +3,7 @@ module.exports = {
     pathPrefix: '/we-read-movies',
     siteMetadata: {
         title: 'We Read Movies',
-        description: 'A podcast about bad gay movies',
+        description: "We don't just watch movies, we read them to filth.",
         author: 'Eric Henke',
         social: [
             {

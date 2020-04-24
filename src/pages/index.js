@@ -7,7 +7,6 @@ import PageLayout from '../components/page-layout';
 import Seo from '../components/seo';
 import CurrentEpisode from '../components/current-episode';
 import EpisodePreview from '../components/episode-preview';
-import { getFluidImage } from '../util';
 import styles from './index.module.css';
 
 const IndexPage = ({ data }) => {
@@ -16,7 +15,7 @@ const IndexPage = ({ data }) => {
 
     return (
         <PageLayout>
-            <Seo image={getFluidImage(currentEpisode.cover.image).src} title="Home" />
+            <Seo title="Episodes" />
             <h1 className={styles.currentEpisodeHeading}>Current Episode</h1>
             <CurrentEpisode {...currentEpisode} />
             <h2 className="section-heading">Past Epsiodes</h2>
