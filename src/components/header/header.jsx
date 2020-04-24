@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import Nav from '../nav';
 import SocialLink from '../navigation/social-link';
 import styles from './header.module.css';
+import Container from '../layout/container';
 
 const Header = () => {
     const data = useStaticQuery(
@@ -27,18 +28,20 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.innerHeader}>
-                <span className={styles.siteTitle}>
-                    <Link to="/">{siteMetadata.title}</Link>
-                </span>
-                <div className={styles.logoContainer}>
-                    {socialMedia.map(({ name, url }) => (
-                        <SocialLink key={name} platform={name} url={url} />
-                    ))}
-                </div>
+                <Container>
+                    <span className={styles.siteTitle}>
+                        <Link to="/">{siteMetadata.title}</Link>
+                    </span>
+                    <div className={styles.logoContainer}>
+                        {socialMedia.map(({ name, url }) => (
+                            <SocialLink key={name} platform={name} url={url} />
+                        ))}
+                    </div>
+                </Container>
             </div>
-            <div className={styles.navContainer}>
+            <Container>
                 <Nav />
-            </div>
+            </Container>
         </header>
     );
 };

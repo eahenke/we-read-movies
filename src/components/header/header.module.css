@@ -25,7 +25,7 @@
     font-family: var(--font-family-heading);
 }
 
-.logoContainer {
+.logo-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
